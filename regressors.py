@@ -55,7 +55,7 @@ def run_mlp_regressor(data):
         y_pred = mlp_reg.predict(X_test)
         # prepare the cross-validation procedure
         cv = KFold(n_splits=5, random_state=1, shuffle=True)
-        # evaluate model
+        
         scores = cross_val_score(mlp_reg, X_test, y_test, cv=cv, n_jobs=-1)
         # compute accuracy of the model
         print("at y",i)
